@@ -1,0 +1,8 @@
+# OS / 편집기
+.DS_Store
+Thumbs.db
+
+# 로컬 작업용
+preview/
+tools/
+tmp/

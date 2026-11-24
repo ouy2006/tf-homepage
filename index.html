@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>테니스판타지 | 실내 테니스 레슨 · 반포 · 방배 · 삼성 · 동작</title>
+<meta name="description" content="서울 서초·강남·동작에서 만나는 테니스판타지. 보라색 코트의 실내 테니스 레슨, 볼머신 연습, 웜업존, 샤워실까지. 반포점 · 방배점 · 삼성점 · 동작테니스장." />
+<meta name="theme-color" content="#703DFF" />
+<meta property="og:title" content="테니스판타지 | TENNIS FANTASY" />
+<meta property="og:description" content="pleasure &amp; potential — 실내 테니스 레슨 &amp; 클럽" />
+<meta property="og:image" content="https://ouy2006.github.io/tf-homepage/images/hero.jpg" />
+<link rel="icon" href="images/brand/favicon.svg" type="image/svg+xml" />
+<style>
+/* ============================================================
+   TENNIS FANTASY — brand system
+   로고·컬러·타이포: 드라이브 MKT Material / Brand Asset
+   (TF_Brand_asset_ver.0.1_210405.pdf, LOGO/RGB/SVG, font/)
+   Pleasure Purple #703DFF · Potential White #FFFFFF
+   Black #24272A · Gray #97A3AE · Light Gray #D8DFE1
+   Light Purple #C5B4E2 · Medium Purple #411199
+   Dark Purple #31096F · Neon Green #B1FD07
+   ============================================================ */
+@font-face{
+  font-family:"Syne";src:url("fonts/Syne-latin.woff2") format("woff2");
+  font-weight:400 800;font-style:normal;font-display:swap;
+}
+@font-face{
+  font-family:"Spoqa Han Sans Neo";src:url("fonts/SpoqaHanSansNeo-Regular.woff2") format("woff2");
+  font-weight:400;font-style:normal;font-display:swap;
+}
+@font-face{
+  font-family:"Spoqa Han Sans Neo";src:url("fonts/SpoqaHanSansNeo-Medium.woff2") format("woff2");
+  font-weight:500;font-style:normal;font-display:swap;
+}
+@font-face{
+  font-family:"Spoqa Han Sans Neo";src:url("fonts/SpoqaHanSansNeo-Bold.woff2") format("woff2");
+  font-weight:700 800;font-style:normal;font-display:swap;
+}
+
+:root{
+  --white:#FFFFFF;
+  --purple:#703DFF;
+  --purple-hover:#5A2BD6;
+  --deep:#411199;
+  --dark:#31096F;
+  --ink:#24272A;
+  --gray:#97A3AE;
+  --lgray:#D8DFE1;
+  --lpurple:#C5B4E2;
+  --neon:#B1FD07;
+  --muted:#586067;
+  --gray-text:#6B747C;
+  --tint:#F4F1FF;
+  --tint-2:#EDE7FF;
+  --line:rgba(36,39,42,.14);
+  --line-2:rgba(36,39,42,.28);
+  --wline:rgba(255,255,255,.22);
+  --latin:"Syne","Spoqa Han Sans Neo",system-ui,sans-serif;
+  --kr:"Spoqa Han Sans Neo","Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif;
+  --max:1220px;
+  --hdr:76px;
+  --shadow:0 26px 60px -44px rgba(49,9,111,.5);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--white);color:var(--ink);
+  font-family:var(--kr);font-size:16px;line-height:1.7;font-weight:400;
+  letter-spacing:-.012em;-webkit-font-smoothing:antialiased;
+  word-break:keep-all;overflow-wrap:break-word;
+}
+section[id],article[id]{scroll-margin-top:calc(var(--hdr) + 18px)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+p{margin:0}
+h1,h2,h3,h4{margin:0;line-height:1.16;letter-spacing:-.035em;font-weight:700}
+ul,ol{margin:0;padding:0;list-style:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+svg{display:block}
+:focus-visible{outline:2px solid var(--purple);outline-offset:3px}
+
+.wrap{width:min(100% - 48px,var(--max));margin-inline:auto}
+.nowrap{white-space:nowrap}
+.section{padding:clamp(60px,7vw,104px) 0;position:relative}
+.section--tint{background:var(--tint)}
+
+/* ---------- brand field (pinstripe + glow) ---------- */
+.field{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.field::before{
+  content:"";position:absolute;inset:0;
+  background-image:repeating-linear-gradient(90deg,var(--stripe,rgba(255,255,255,.55)) 0 1px,transparent 1px var(--gap,10px));
+  opacity:var(--stripe-op,.9);
+  -webkit-mask-image:radial-gradient(120% 120% at 50% 46%,transparent 10%,rgba(0,0,0,.18) 44%,#000 92%);
+  mask-image:radial-gradient(120% 120% at 50% 46%,transparent 10%,rgba(0,0,0,.18) 44%,#000 92%);
+}
+.field::after{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(56% 62% at 62% 44%,var(--aura-1,rgba(197,180,226,.95)) 0%,var(--aura-2,rgba(112,61,255,.5)) 42%,rgba(112,61,255,0) 74%);
+}
+.field--soft::after{opacity:.55}
+
+/* ---------- type helpers ---------- */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:12px;font-family:var(--latin);
+  font-size:11px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--purple);
+}
+.eyebrow::before{content:"";width:34px;height:1px;background:currentColor}
+.sec-head{
+  position:relative;border-top:1px solid var(--line);
+  padding-top:clamp(20px,2.4vw,28px);margin-bottom:clamp(30px,4vw,54px);
+}
+.sec-head::before{content:"";position:absolute;top:-1px;left:0;width:64px;height:1px;background:var(--purple)}
+.sec-head h2{font-size:clamp(26px,3.5vw,42px);margin-top:16px}
+.sec-head p{margin-top:16px;max-width:64ch;color:var(--muted);font-size:clamp(14px,1.15vw,16px);line-height:1.8}
+.sec-head__row{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:flex-end;justify-content:space-between}
+.lead{color:var(--muted)}
+
+.tag{
+  display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border:1px solid rgba(112,61,255,.34);
+  color:var(--purple);background:#fff;font-size:11.5px;font-weight:500;letter-spacing:0;white-space:nowrap;
+}
+.tag--ok{border-color:var(--line-2);color:var(--ink)}
+.tag--need{border-color:var(--lgray);color:var(--muted);background:#F5F6F7}
+.tag--neon{border-color:rgba(177,253,7,.8);background:rgba(177,253,7,.16);color:#3E4E00}
+.tag--en{font-family:var(--latin);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;height:50px;padding:0 22px;
+  border:1px solid transparent;border-radius:2px;font-family:var(--kr);font-size:14px;font-weight:700;
+  letter-spacing:-.01em;line-height:1;transition:background .2s,color .2s,border-color .2s,transform .2s;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn--primary{background:var(--purple);color:#fff}
+.btn--primary:hover{background:var(--purple-hover)}
+.btn--line{border-color:var(--line-2);color:var(--ink);background:transparent}
+.btn--line:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+.btn--dark{background:var(--ink);color:#fff}
+.btn--dark:hover{background:#000}
+.btn--neon{background:var(--neon);color:#243000}
+.btn--neon:hover{background:#C6FF3C}
+.btn--onpurple{background:#fff;color:var(--purple)}
+.btn--onpurple:hover{background:var(--tint-2)}
+.btn--ghost{border-color:rgba(255,255,255,.55);color:#fff}
+.btn--ghost:hover{background:#fff;color:var(--purple);border-color:#fff}
+.btn--sm{height:42px;padding:0 16px;font-size:13px}
+.btn__arrow{font-family:var(--latin);font-size:15px;line-height:1}
+
+/* ---------- hairline stack (brand divider) ---------- */
+.rules{height:16px;background:repeating-linear-gradient(180deg,var(--rule-c,rgba(36,39,42,.18)) 0 1px,transparent 1px 4px);opacity:.9}
+
+/* ============ header ============ */
+.site-header{
+  position:fixed;top:0;left:0;right:0;z-index:80;
+  --fg:#fff;--bd:rgba(255,255,255,.34);--accent:var(--neon);
+  transition:background .25s ease,box-shadow .25s ease;
+}
+.site-header.is-stuck{
+  --fg:var(--ink);--bd:var(--line);--accent:var(--purple);
+  background:rgba(255,255,255,.96);
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  box-shadow:0 1px 0 var(--line);
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;height:var(--hdr)}
+.brand{display:flex;align-items:center;gap:14px;color:var(--fg)}
+.brand .logo{width:152px;height:13px;fill:currentColor}
+.brand__kr{
+  font-size:11px;font-weight:500;letter-spacing:.18em;color:var(--fg);opacity:.72;
+  padding-left:14px;border-left:1px solid var(--bd);
+}
+.nav{display:flex;align-items:center;gap:26px}
+.nav a{position:relative;padding:6px 0;font-size:14px;font-weight:500;color:var(--fg);opacity:.84;transition:opacity .2s}
+.nav a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--accent);transition:right .25s ease}
+.nav a:hover{opacity:1}
+.nav a:hover::after{right:0}
+.header-cta{
+  display:inline-flex;align-items:center;height:38px;padding:0 16px;border:1px solid var(--bd);
+  color:var(--fg);font-size:12.5px;font-weight:700;letter-spacing:.01em;border-radius:2px;transition:.2s;
+}
+.header-cta:hover{background:#fff;color:var(--purple);border-color:#fff}
+.is-stuck .header-cta:hover{background:var(--purple);color:#fff;border-color:var(--purple)}
+.nav-toggle{
+  display:none;width:42px;height:42px;border:1px solid var(--bd);border-radius:2px;
+  align-items:center;justify-content:center;flex-direction:column;gap:5px;
+}
+.nav-toggle span{display:block;width:17px;height:1.5px;background:var(--fg);transition:.2s}
+
+/* ============ hero ============ */
+.hero{position:relative}
+.hero__cover{
+  position:relative;overflow:hidden;background:var(--purple);color:#fff;
+  padding:calc(var(--hdr) + clamp(26px,4vw,44px)) 0 clamp(26px,3.4vw,40px);
+}
+.hero__cover-inner{position:relative;z-index:2;display:grid;gap:clamp(16px,2.6vw,26px)}
+.cover-row{
+  display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;
+  font-family:var(--latin);font-size:10.5px;font-weight:500;letter-spacing:.26em;
+  text-transform:uppercase;color:rgba(255,255,255,.82);
+}
+.hero__wordmark{width:100%;height:auto;aspect-ratio:435.6/37.51;fill:#fff}
+.hero__body{background:#fff;padding:clamp(34px,5vw,62px) 0 clamp(34px,4.4vw,56px)}
+.hero__grid{display:grid;grid-template-columns:1.06fr .94fr;gap:clamp(26px,4vw,56px);align-items:start}
+.hero h1{font-size:clamp(30px,4.5vw,54px);margin-top:18px;letter-spacing:-.042em}
+.hero h1 em{
+  font-style:normal;color:var(--purple);
+  background:linear-gradient(180deg,transparent 86%,rgba(177,253,7,.7) 86%);
+}
+.hero__lead{margin-top:20px;max-width:44ch;font-size:clamp(14.5px,1.2vw,16.5px);line-height:1.8;color:var(--muted)}
+.hero__actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.hero__facts{display:grid;grid-template-columns:repeat(2,1fr);margin-top:clamp(26px,3vw,38px);border-top:1px solid var(--line)}
+.hero__facts li{padding:14px 16px 0 0;border-bottom:1px solid var(--line)}
+.hero__facts li:nth-child(even){padding-left:16px;border-left:1px solid var(--line)}
+.hero__facts b{display:block;font-family:var(--latin);font-size:15px;font-weight:700;letter-spacing:.01em}
+.hero__facts span{display:block;margin-top:2px;font-size:11.5px;color:var(--gray-text);letter-spacing:.02em}
+.hero__shot{position:relative;margin:0;padding:10px;border:1px solid var(--line-2);background:#fff}
+.hero__shot img{width:100%;aspect-ratio:4/3.2;object-fit:cover;object-position:58% 42%}
+.hero__shot figcaption{
+  display:flex;align-items:center;gap:8px;margin-top:16px;padding-left:10px;
+  font-family:var(--latin);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gray-text);
+}
+.hero__shot figcaption::before{content:"";width:6px;height:6px;background:var(--purple)}
+
+/* ============ branch strip ============ */
+.branches{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.branches ul{display:grid;grid-template-columns:repeat(4,1fr)}
+.branches li+li{border-left:1px solid var(--line)}
+.branches a{position:relative;display:block;padding:22px 22px 24px;transition:background .2s}
+.branches a::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--purple);
+  transform:scaleY(0);transform-origin:top;transition:transform .25s ease;
+}
+.branches a:hover{background:var(--tint)}
+.branches a:hover::before{transform:scaleY(1)}
+.branches .num{font-family:var(--latin);font-size:10.5px;font-weight:700;letter-spacing:.2em;color:var(--purple)}
+.branches b{display:block;margin-top:8px;font-size:17px;font-weight:700;letter-spacing:-.03em}
+.branches .desc{display:block;margin-top:4px;font-size:12.5px;color:var(--muted);line-height:1.55}
+.branches .en{
+  display:block;margin-top:10px;font-family:var(--latin);font-size:9.5px;font-weight:500;
+  letter-spacing:.24em;text-transform:uppercase;color:var(--gray-text);
+}
+
+/* ============ facilities ============ */
+.facilities{display:grid;gap:clamp(40px,5vw,72px)}
+.facility{border-top:1px solid var(--line);padding-top:clamp(22px,2.6vw,32px)}
+.facility__head{
+  display:grid;grid-template-columns:auto 1fr auto;gap:clamp(12px,2vw,24px);
+  align-items:start;margin-bottom:clamp(20px,2.6vw,30px);
+}
+.facility__idx{
+  font-family:var(--latin);font-size:clamp(20px,2.2vw,26px);font-weight:500;
+  line-height:1;color:var(--lpurple);padding-top:6px;letter-spacing:-.02em;
+}
+.facility__title h3{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;font-size:clamp(21px,2.4vw,29px)}
+.facility__addr{margin-top:8px;font-size:12.5px;color:var(--muted);line-height:1.6}
+.facility__body{display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(20px,3vw,40px);align-items:start}
+
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:122px;gap:8px}
+.gallery figure{position:relative;margin:0;overflow:hidden;background:var(--tint-2);border:1px solid var(--line)}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.gallery figure:hover img{transform:scale(1.04)}
+.gallery figcaption{
+  position:absolute;inset:auto 0 0 0;padding:22px 10px 8px;font-size:11px;font-weight:500;color:#fff;
+  background:linear-gradient(180deg,rgba(36,39,42,0),rgba(36,39,42,.82));letter-spacing:0;
+}
+.gallery .g-lg{grid-column:span 2;grid-row:span 2}
+.gallery .g-wide{grid-column:span 2}
+
+.facts{display:grid;border-top:1px solid var(--line)}
+.fact{display:grid;grid-template-columns:24px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.fact__n{font-family:var(--latin);font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--purple);padding-top:4px}
+.fact b{display:block;font-size:14px;font-weight:700;letter-spacing:-.02em}
+.fact p{margin-top:3px;font-size:12.5px;color:var(--muted);line-height:1.6}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.chips span{border:1px solid var(--line);padding:5px 10px;font-size:11.5px;font-weight:500;color:var(--ink);background:#fff}
+.note{
+  margin-top:14px;padding:12px 14px;border-left:2px solid var(--neon);background:#F8FAF1;
+  font-size:12px;line-height:1.65;color:#4C5348;
+}
+.note b{color:#31402A}
+
+/* brand panel for branches without photos */
+.panel{
+  position:relative;overflow:hidden;display:flex;flex-direction:column;gap:18px;justify-content:space-between;
+  min-height:300px;padding:clamp(22px,3vw,30px);background:var(--dark);color:#fff;
+}
+.panel::before{
+  content:"";position:absolute;inset:0;
+  background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.58) 0 1px,transparent 1px 11px);
+  opacity:.55;
+  -webkit-mask-image:radial-gradient(135% 125% at 42% 58%,transparent 6%,rgba(0,0,0,.3) 44%,#000 92%);
+  mask-image:radial-gradient(135% 125% at 42% 58%,transparent 6%,rgba(0,0,0,.3) 44%,#000 92%);
+}
+.panel::after{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(44% 50% at 80% 24%,rgba(112,61,255,.42) 0%,rgba(65,17,153,.14) 52%,rgba(49,9,111,0) 78%);
+}
+.panel>*{position:relative;z-index:1}
+.panel__seal{position:absolute;top:16px;right:16px;width:86px;height:86px;fill:rgba(255,255,255,.3);z-index:0}
+.panel__label{font-family:var(--latin);font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.66)}
+.panel__stats{display:grid;border-top:1px solid rgba(255,255,255,.2)}
+.panel__stats span{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.16);font-size:12.5px;font-weight:500;color:rgba(255,255,255,.92)}
+.panel__note{font-size:11.5px;line-height:1.65;color:rgba(255,255,255,.7)}
+
+/* ---------- brand story ---------- */
+.story{display:grid;grid-template-columns:1fr 1fr .92fr;margin-top:clamp(40px,5vw,64px);border:1px solid var(--line)}
+.story figure{margin:0;overflow:hidden;background:var(--tint-2);min-height:260px}
+.story figure img{width:100%;height:100%;object-fit:cover}
+.story__text{
+  display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:14px;
+  padding:clamp(24px,3vw,34px);background:var(--tint);
+}
+.story__text h3{font-size:clamp(19px,2vw,23px);line-height:1.35}
+.story__text p{font-size:13px;color:var(--muted);line-height:1.75}
+.story__text blockquote{
+  margin:0;padding-top:14px;border-top:1px solid var(--line);
+  font-family:var(--latin);font-size:13px;font-weight:500;letter-spacing:.02em;color:var(--purple);line-height:1.6;
+}
+
+/* ============ programs ============ */
+.prog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.prog{background:#fff;border:1px solid var(--line);padding:clamp(22px,2.6vw,30px)}
+.prog__name{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:19px;font-weight:700;letter-spacing:-.03em}
+.prog__badge{
+  border:1px solid rgba(112,61,255,.32);color:var(--purple);padding:3px 7px;
+  font-family:var(--latin);font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+}
+.prog p{margin-top:12px;font-size:13.5px;color:var(--muted);line-height:1.7}
+.prog ul{margin-top:16px;display:grid;gap:7px}
+.prog li{position:relative;padding-left:16px;font-size:13px;color:var(--ink);line-height:1.6}
+.prog li::before{content:"";position:absolute;left:0;top:9px;width:5px;height:5px;background:var(--purple)}
+.subhead{font-size:clamp(19px,2.2vw,25px);margin:clamp(32px,4vw,46px) 0 16px}
+.routine{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.routine div{padding:20px 20px 20px 0;border-right:1px solid var(--line)}
+.routine div:last-child{border-right:0}
+.routine div+div{padding-left:20px}
+.routine b{display:block;font-family:var(--latin);font-size:19px;font-weight:700;letter-spacing:.01em;color:var(--purple)}
+.routine span{display:block;margin-top:6px;font-size:12.5px;color:var(--muted);line-height:1.6}
+.routine-note{margin-top:12px;font-size:12.5px;color:var(--gray-text);line-height:1.7}
+
+.price-card{margin-top:clamp(28px,4vw,44px);background:#fff;border:1px solid var(--line)}
+.price-card__head{
+  display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;
+  padding:20px 24px;border-bottom:1px solid var(--line);
+}
+.price-card__head strong{font-size:16px;letter-spacing:-.02em}
+.price-card__head p{margin-top:4px;font-size:12px;color:var(--gray-text)}
+.tabs{display:flex;border:1px solid var(--line)}
+.tabs button{height:36px;padding:0 18px;font-size:12.5px;font-weight:700;color:var(--muted);border-left:1px solid var(--line)}
+.tabs button:first-child{border-left:0}
+.tabs button[aria-selected="true"]{background:var(--ink);color:#fff}
+.price-body{padding:4px 24px 24px;column-count:2;column-gap:44px}
+.price-body .table-scroll{break-inside:avoid;-webkit-column-break-inside:avoid}
+.price-hint{display:none;margin-top:6px;font-size:11.5px;color:var(--gray-text)}
+.price-body[hidden]{display:none}
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table.prices{width:100%;border-collapse:collapse;min-width:480px;font-size:13px}
+table.prices caption{
+  text-align:left;padding:18px 0 8px;font-family:var(--latin);font-size:10.5px;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--purple);
+}
+table.prices th,table.prices td{padding:10px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+table.prices thead th{font-size:11px;color:var(--gray-text);font-weight:500;letter-spacing:.02em;border-bottom:1px solid var(--line-2)}
+table.prices th:first-child,table.prices td:first-child{text-align:left;white-space:normal}
+table.prices tbody th{font-weight:500;color:var(--ink)}
+table.prices tr.is-key td,table.prices tr.is-key th{background:var(--tint)}
+table.prices .won{font-family:var(--latin);font-variant-numeric:tabular-nums;font-weight:500;font-size:12.5px}
+.price-foot{
+  display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;
+  padding:18px 24px;border-top:1px solid var(--line);background:var(--tint);font-size:12px;color:var(--muted);
+}
+.price-foot span{max-width:56ch;line-height:1.6}
+
+/* ============ roadmap ============ */
+.roadmap-sec{position:relative;overflow:hidden;background:var(--dark);color:#fff}
+.roadmap-sec .field{--stripe:rgba(255,255,255,.4);--gap:11px}
+.roadmap-sec .field::after{background:radial-gradient(46% 46% at 22% 2%,rgba(112,61,255,.55),rgba(65,17,153,.18) 46%,rgba(49,9,111,0) 74%)}
+.roadmap-sec .wrap{position:relative;z-index:1}
+.roadmap-sec .sec-head{border-top-color:rgba(255,255,255,.22)}
+.roadmap-sec .sec-head::before{background:var(--neon)}
+.roadmap-sec .eyebrow{color:var(--neon)}
+.roadmap-sec .sec-head h2{color:#fff}
+.roadmap-sec .sec-head p{color:rgba(255,255,255,.72)}
+.roadmap-path{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:20px}
+.roadmap-path span{
+  padding:7px 14px;border:1px solid rgba(255,255,255,.26);font-size:12.5px;font-weight:700;letter-spacing:-.02em;
+}
+.roadmap-path span:last-child{background:rgba(177,253,7,.14);border-color:rgba(177,253,7,.5);color:var(--neon)}
+.roadmap-path i{font-style:normal;font-family:var(--latin);font-size:13px;color:rgba(177,253,7,.8)}
+.roadmap{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.roadmap__step{
+  position:relative;display:flex;flex-direction:column;gap:12px;padding:22px;
+  border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.045);
+}
+.roadmap__step:not(:last-child)::after{
+  content:"\2192";position:absolute;right:-15px;top:46%;z-index:2;
+  font-family:var(--latin);font-size:15px;color:rgba(177,253,7,.75);
+}
+.roadmap__step--key{background:rgba(112,61,255,.26);border-color:rgba(177,253,7,.42)}
+.roadmap__head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.roadmap__num{font-family:var(--latin);font-size:10px;font-weight:700;letter-spacing:.22em;color:var(--neon)}
+.roadmap__level{
+  padding:3px 8px;border:1px solid rgba(255,255,255,.28);font-size:11px;font-weight:500;color:rgba(255,255,255,.92);white-space:nowrap;
+}
+.roadmap__photo{position:relative;margin:0;aspect-ratio:16/10;overflow:hidden;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06)}
+.roadmap__photo img{width:100%;height:100%;object-fit:cover}
+.roadmap__photo figcaption{
+  position:absolute;left:0;bottom:0;padding:6px 10px;background:rgba(36,39,42,.78);
+  font-size:10.5px;font-weight:500;color:rgba(255,255,255,.94);
+}
+.roadmap__step h3{font-size:19px;color:#fff}
+.roadmap__sub{font-family:var(--latin);font-size:11px;font-weight:500;letter-spacing:.06em;color:var(--lpurple)}
+.roadmap__step p{font-size:13px;line-height:1.7;color:rgba(255,255,255,.76)}
+.roadmap__list{display:grid;gap:6px}
+.roadmap__list li{position:relative;padding-left:14px;font-size:12.3px;line-height:1.55;color:rgba(255,255,255,.86)}
+.roadmap__list li::before{content:"";position:absolute;left:0;top:8px;width:4px;height:4px;background:var(--neon)}
+.roadmap__foot{
+  margin-top:auto;padding-top:12px;border-top:1px solid rgba(255,255,255,.16);
+  font-size:11.5px;font-weight:500;color:rgba(255,255,255,.68);line-height:1.5;
+}
+.level-ladder{display:grid;grid-template-columns:repeat(4,1fr);margin-top:20px;border:1px solid rgba(255,255,255,.2)}
+.level-ladder div{padding:14px 16px;border-left:1px solid rgba(255,255,255,.16)}
+.level-ladder div:first-child{border-left:0}
+.level-ladder b{display:block;font-family:var(--latin);font-size:15px;font-weight:700;letter-spacing:.04em;color:#fff}
+.level-ladder span{display:block;margin-top:4px;font-size:11px;line-height:1.5;color:rgba(255,255,255,.7)}
+.level-ladder .is-now{background:rgba(177,253,7,.12)}
+.level-ladder .is-now b{color:var(--neon)}
+.roadmap-note{margin-top:18px;font-size:12px;line-height:1.7;color:rgba(255,255,255,.68)}
+.roadmap-note b{color:rgba(255,255,255,.85)}
+
+/* ============ events ============ */
+.events{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.event{
+  display:flex;flex-direction:column;gap:10px;padding:22px;background:#fff;border:1px solid var(--line);
+  transition:border-color .2s,transform .2s;
+}
+.event:hover{border-color:var(--purple);transform:translateY(-2px)}
+.event__top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px}
+.event h3{font-size:17.5px;line-height:1.35;margin-top:2px}
+.event p{font-size:12.8px;color:var(--muted);line-height:1.7}
+.event dl{margin:6px 0 0;display:grid}
+.event dl>div{display:flex;gap:10px;padding:6px 0;border-top:1px solid var(--line);font-size:12.3px;line-height:1.55}
+.event dt{flex:0 0 42px;color:var(--gray-text);font-weight:500}
+.event dd{margin:0;color:var(--ink)}
+.event--pending{background:#FBFFF0;border-color:rgba(177,253,7,.65)}
+.event--pending:hover{border-color:var(--purple)}
+
+.promo{
+  position:relative;display:grid;grid-template-columns:1.06fr .94fr;overflow:hidden;
+  margin-top:22px;background:var(--ink);color:#fff;
+}
+.promo::before{
+  content:"";position:absolute;inset:0;
+  background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.4) 0 1px,transparent 1px 12px);
+  opacity:.3;
+  -webkit-mask-image:linear-gradient(90deg,#000,transparent 62%);
+  mask-image:linear-gradient(90deg,#000,transparent 62%);
+}
+.promo__text{position:relative;z-index:1;padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.promo__text h3{font-size:clamp(20px,2.2vw,26px);color:#fff}
+.promo__text p{font-size:13px;color:rgba(255,255,255,.72);line-height:1.75;max-width:46ch}
+.promo img{width:100%;height:100%;min-height:250px;object-fit:cover}
+
+.event-gallery__head{
+  display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;justify-content:space-between;
+  margin-top:clamp(30px,4vw,44px);padding-top:16px;border-top:1px solid var(--line);
+}
+.event-gallery__head b{font-size:15px;letter-spacing:-.02em}
+.event-gallery__head span{font-size:11.5px;color:var(--gray-text)}
+.event-gallery{grid-template-columns:repeat(3,1fr);grid-auto-rows:220px;margin-top:14px}
+.event-gallery figcaption{font-size:11px;line-height:1.4;padding:24px 10px 10px}
+.event-gallery .g-low img{object-position:50% 68%}
+
+/* ============ visit ============ */
+.visit-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.visit{display:flex;flex-direction:column;gap:16px;padding:24px;background:#fff;border:1px solid var(--line)}
+.visit__top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.visit h3{font-size:19px}
+.visit__type{margin-top:4px;font-size:11.5px;color:var(--gray-text)}
+.visit dl{margin:0;display:grid}
+.visit dl>div{display:grid;grid-template-columns:58px 1fr;gap:10px;padding:8px 0;border-top:1px solid var(--line);font-size:13px}
+.visit dt{color:var(--gray-text);font-size:11.5px;font-weight:500;padding-top:2px}
+.visit dd{margin:0;color:var(--ink);line-height:1.6}
+.visit__links{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:4px}
+.visit__links a{
+  display:inline-flex;align-items:center;height:36px;padding:0 14px;border:1px solid var(--line-2);
+  font-size:12px;font-weight:700;transition:.18s;
+}
+.visit__links a:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+.visit__links a.solid{background:var(--purple);border-color:var(--purple);color:#fff}
+.visit__links a.solid:hover{background:var(--purple-hover);border-color:var(--purple-hover)}
+
+/* ============ cta ============ */
+.cta{position:relative;overflow:hidden;background:var(--purple);color:#fff;padding:clamp(52px,6.5vw,88px) 0}
+.cta .wrap{position:relative;z-index:1}
+.cta__mark{
+  position:absolute;right:0;bottom:4%;width:min(720px,70%);aspect-ratio:435.6/37.51;fill:#fff;opacity:.12;
+  pointer-events:none;z-index:0;
+}
+.cta__inner{display:flex;flex-wrap:wrap;gap:26px;align-items:flex-end;justify-content:space-between}
+.cta h2{font-size:clamp(24px,3.2vw,38px);color:#fff;max-width:22ch}
+.cta p{margin-top:14px;max-width:52ch;font-size:14px;color:rgba(255,255,255,.8);line-height:1.75}
+.cta__tag{
+  display:block;margin-bottom:16px;font-family:var(--latin);font-size:10.5px;font-weight:500;
+  letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.72);
+}
+.cta__actions{display:flex;flex-wrap:wrap;gap:10px}
+
+/* ============ footer ============ */
+.site-footer{background:var(--ink);color:rgba(255,255,255,.64);padding-bottom:34px}
+.site-footer .rules{--rule-c:rgba(255,255,255,.22)}
+.footer-top{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,4vw,48px);
+  padding:clamp(32px,4vw,44px) 0 28px;border-bottom:1px solid rgba(255,255,255,.14);
+}
+.footer-brand{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.footer-brand .logo{width:196px;height:16.9px;fill:#fff}
+.footer-brand .brand__kr{color:#fff;opacity:.56;border-color:rgba(255,255,255,.24);margin-left:0;padding-left:0;border-left:0;letter-spacing:.2em;font-size:10px}
+.footer-brand p{font-size:12.5px;line-height:1.75;color:rgba(255,255,255,.56);max-width:38ch}
+.footer-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px 24px;font-size:12.5px;align-content:start}
+.footer-links a{display:inline-block;padding:2px 0;transition:color .18s}
+.footer-links a:hover{color:#fff}
+.footer-note{margin-top:20px;display:grid;gap:6px;font-size:11.5px;line-height:1.7;color:rgba(255,255,255,.58)}
+.footer-note a{color:rgba(255,255,255,.7);text-decoration:underline;text-underline-offset:3px}
+
+/* floating kakao */
+.float-cta{
+  position:fixed;right:16px;bottom:16px;z-index:70;display:inline-flex;align-items:center;gap:8px;
+  height:50px;padding:0 18px;background:var(--purple);color:#fff;border-radius:2px;
+  font-size:13px;font-weight:700;box-shadow:0 16px 34px -18px rgba(49,9,111,.85);transition:background .18s,transform .18s;
+}
+.float-cta:hover{background:var(--purple-hover);transform:translateY(-2px)}
+.float-cta svg{width:18px;height:18px;flex:0 0 auto;fill:currentColor}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.is-in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .btn:hover,.event:hover,.float-cta:hover{transform:none}
+}
+
+/* ============ responsive ============ */
+@media (max-width:1080px){
+  .hero__grid{grid-template-columns:1.1fr .9fr}
+  .facility__body{grid-template-columns:1fr 1fr}
+  .events{grid-template-columns:repeat(2,1fr)}
+  .event-gallery{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:980px){
+  .hero__grid{grid-template-columns:1fr;gap:34px}
+  .hero__shot{max-width:560px}
+  .facility__body{grid-template-columns:1fr}
+  .story{grid-template-columns:1fr 1fr}
+  .story__text{grid-column:1/-1}
+  .promo{grid-template-columns:1fr}
+  .promo img{min-height:220px;order:-1}
+  .roadmap{grid-template-columns:1fr;gap:26px}
+  .roadmap__photo{aspect-ratio:2/1}
+  .roadmap__step:not(:last-child)::after{content:"\2193";right:auto;left:50%;top:auto;bottom:-22px;transform:translateX(-50%)}
+  .level-ladder{grid-template-columns:1fr 1fr}
+  .level-ladder div:nth-child(3){border-left:0}
+  .level-ladder div:nth-child(n+3){border-top:1px solid rgba(255,255,255,.16)}
+  .visit-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
+  .branches ul{grid-template-columns:repeat(2,1fr)}
+  .branches li:nth-child(3){border-left:0}
+  .branches li:nth-child(n+3){border-top:1px solid var(--line)}
+}
+@media (max-width:840px){
+  :root{--hdr:66px}
+  .nav{display:none}
+  .nav-toggle{display:flex}
+  .header-cta{display:none}
+  .brand .logo{width:126px;height:10.8px}
+  .brand__kr{display:none}
+  .site-header.is-open{--fg:#fff;--bd:rgba(255,255,255,.34);background:var(--dark)}
+  .site-header.is-open .nav{
+    display:flex;position:absolute;top:var(--hdr);left:0;right:0;flex-direction:column;align-items:stretch;gap:0;
+    padding:8px 24px 26px;background:var(--dark);border-top:1px solid rgba(255,255,255,.14);
+  }
+  .site-header.is-open .nav a{padding:14px 0;font-size:16px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .site-header.is-open .nav-toggle span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+  .site-header.is-open .nav-toggle span:nth-child(2){opacity:0}
+  .site-header.is-open .nav-toggle span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+  .prog-grid{grid-template-columns:1fr}
+  .routine{grid-template-columns:1fr}
+  .routine div{border-right:0;border-bottom:1px solid var(--line);padding:16px 0}
+  .routine div+div{padding-left:0}
+  .routine div:last-child{border-bottom:0}
+  .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:118px}
+  .gallery .g-lg{grid-column:span 2;grid-row:span 1}
+  .event-gallery{grid-template-columns:1fr 1fr;grid-auto-rows:190px}
+  .events{grid-template-columns:1fr}
+  .facility__head{grid-template-columns:auto 1fr}
+  .facility__head .btn{grid-column:1/-1;justify-self:start}
+  .price-card__head{padding:16px}
+  .price-body{column-count:1;padding:2px 16px 20px}
+  .price-hint{display:block;padding:0 16px;margin-top:-4px}
+  .price-foot{padding:16px}
+  .float-cta{right:12px;bottom:12px;width:50px;padding:0;justify-content:center}
+  .float-cta__label{display:none}
+  .panel__seal{width:64px;height:64px;top:14px;right:14px}
+  .panel__label{padding-right:72px}
+  .cta__inner{gap:22px}
+  .cta__mark{display:none}
+  .cover-row{font-size:9.5px;letter-spacing:.18em}
+}
+@media (max-width:560px){
+  .wrap{width:min(100% - 32px,var(--max))}
+  .hero__facts li{padding-right:10px}
+  .hero__actions .btn{flex:1 1 100%}
+  .branches a{padding:18px 16px}
+  .event-gallery{grid-template-columns:1fr;grid-auto-rows:200px}
+  .event-gallery figure:first-child{grid-column:auto}
+  .story{grid-template-columns:1fr}
+  .story figure{min-height:220px}
+  .level-ladder{grid-template-columns:1fr}
+  .level-ladder div{border-left:0;border-top:1px solid rgba(255,255,255,.16)}
+  .level-ladder div:first-child{border-top:0}
+  .visit{padding:20px}
+  .visit dl>div{grid-template-columns:54px 1fr}
+  .footer-links{grid-template-columns:1fr}
+  .cta__actions .btn{width:100%}
+}
+</style>
+<noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
+</head>
+<body>
+
+<!-- 공식 로고 (드라이브 MKT Material/LOGO/RGB/SVG 원본 경로) -->
+<svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden" xmlns="http://www.w3.org/2000/svg">
+<symbol id="tf-wordmark" viewBox="203.15 278.87 435.6 37.51">
+<polygon points="203.15 282.76 215.41 282.76 215.41 315.68 219.03 315.68 219.03 282.76 231.29 282.76 231.29 279.43 203.15 279.43 203.15 282.76"/ fill="currentColor"/>
+<polygon points="240.99 299.45 258.54 299.45 258.54 295.76 240.99 295.76 240.99 283.19 262.18 283.19 262.18 279.43 236.95 279.43 236.95 315.68 262.23 315.68 262.23 311.92 240.99 311.92 240.99 299.45"/ fill="currentColor"/>
+<path d="M605.61,298.78a13.88,13.88,0,0,0-3.39-1.84c-1.26-.48-2.68-.94-3.88-1.29-1.83-.53-3.31-1-4.63-1.51a12.13,12.13,0,0,1-3.06-1.59,4.72,4.72,0,0,1-2.09-4.11,4.77,4.77,0,0,1,2.22-4.36,9.53,9.53,0,0,1,5.19-1.4,8.78,8.78,0,0,1,5.78,1.84c1.48,1.23,2.26,3.13,2.34,5.94h3.67a11.64,11.64,0,0,0-2.79-8.41c-1.93-2.12-4.85-3.17-8.75-3.17a13.83,13.83,0,0,0-6.39,1.36,9.94,9.94,0,0,0-4,3.57,8.8,8.8,0,0,0-1.37,4.71,7.91,7.91,0,0,0,1.17,4.38,10.7,10.7,0,0,0,3.08,3.1,18.35,18.35,0,0,0,4,2c1.51.54,3,1,4.51,1.42a28.66,28.66,0,0,1,4.28,1.55,7.11,7.11,0,0,1,2.67,2,4.85,4.85,0,0,1,.94,3.12,5.7,5.7,0,0,1-3.61,5.52,10.91,10.91,0,0,1-4.43.79,11.8,11.8,0,0,1-5.31-1.12,8.93,8.93,0,0,1-3.55-3.06,8.61,8.61,0,0,1-1.47-4.3h-3.52a5.64,5.64,0,0,0,0,2.34,11.89,11.89,0,0,0,1.15,3.21,12.14,12.14,0,0,0,6.63,5.8,17.06,17.06,0,0,0,6.11,1,14.66,14.66,0,0,0,6.83-1.39,9.29,9.29,0,0,0,3.9-3.65,9.85,9.85,0,0,0,1.25-4.88,9.55,9.55,0,0,0-1-4.55A8.94,8.94,0,0,0,605.61,298.78Z"/ fill="currentColor"/>
+<polygon points="635 279.43 625.07 300.11 615.07 279.43 611.18 279.43 623.15 303.52 623.15 315.68 626.77 315.68 626.77 303.52 638.74 279.43 635 279.43"/ fill="currentColor"/>
+<polygon points="294.65 308.76 272.35 279.43 267.89 279.43 267.89 315.68 272.35 315.68 272.35 286.4 294.65 315.68 299.11 315.68 299.11 279.43 294.65 279.43 294.65 308.76"/ fill="currentColor"/>
+<polygon points="332.3 308.31 309.81 279.46 304.84 279.46 304.84 315.68 309.81 315.68 309.81 286.94 332.3 315.68 337.23 315.68 337.23 279.46 332.3 279.46 332.3 308.31"/ fill="currentColor"/>
+<rect x="344.3" y="279.49" width="5.41" height="36.19"/ fill="currentColor"/>
+<polygon points="412.16 286.21 437.66 286.21 437.66 279.6 403.89 279.6 403.89 315.68 412.16 315.68 412.16 301.71 434.06 301.71 434.06 295.07 412.16 295.07 412.16 286.21"/ fill="currentColor"/>
+<polygon points="508.1 307.85 484.29 279.49 478.82 279.49 478.82 315.68 484.29 315.68 484.29 287.48 508.1 315.68 513.5 315.68 513.5 279.49 508.1 279.49 508.1 307.85"/ fill="currentColor"/>
+<polygon points="549.4 283.98 549.4 279.46 518.9 279.46 518.9 283.98 531.67 283.98 531.67 315.68 536.63 315.68 536.63 283.98 549.4 283.98"/ fill="currentColor"/>
+<path d="M557.71,302l3.2-8.66,3.19-8.66,3.2,8.66,3.19,8.66H557.71Zm4-22.59L548,315.68h4.68l3.5-9.48H572l3.5,9.48h4.8l-13.89-36.25Z"/ fill="currentColor"/>
+<path d="M356.39,303.63h6.75a6.35,6.35,0,0,0,1.67,3.57,9.83,9.83,0,0,0,3.87,2.54,15.51,15.51,0,0,0,5.5.92,13.91,13.91,0,0,0,4.57-.64,5.73,5.73,0,0,0,2.68-1.82,4.49,4.49,0,0,0,.89-2.78,3.06,3.06,0,0,0-1.06-2.49,9,9,0,0,0-3.29-1.44c-1.49-.4-3.4-.79-5.74-1.2a42.44,42.44,0,0,1-5.47-1.34,21,21,0,0,1-4.68-2.12,10.28,10.28,0,0,1-3.26-3.12,7.91,7.91,0,0,1-1.2-4.41,8.84,8.84,0,0,1,1.73-5.38,11.28,11.28,0,0,1,5.07-3.71,22.18,22.18,0,0,1,8.2-1.33q7.35,0,11.26,3.28a10.86,10.86,0,0,1,3.79,9h-6.52a5.8,5.8,0,0,0-2.62-5,11.52,11.52,0,0,0-6.19-1.53,12.77,12.77,0,0,0-5.66,1.11,3.86,3.86,0,0,0-2.26,3.74,3.36,3.36,0,0,0,.53,1.87,4.33,4.33,0,0,0,1.81,1.42,19.27,19.27,0,0,0,3.49,1.17c1.46.37,3.28.74,5.43,1.12A42.51,42.51,0,0,1,381,296.3a16.41,16.41,0,0,1,4.24,1.95,8.2,8.2,0,0,1,2.79,3,9.56,9.56,0,0,1,1,4.52,9.76,9.76,0,0,1-1.59,5.52,10.22,10.22,0,0,1-4.9,3.73,23.41,23.41,0,0,1-8.62,1.34,23.84,23.84,0,0,1-6.88-.89,17.57,17.57,0,0,1-5-2.37,14.91,14.91,0,0,1-3.38-3.21,11,11,0,0,1-1.78-3.4A8,8,0,0,1,356.39,303.63Z"/ fill="currentColor"/>
+<path d="M435.8,315.68,452,279.54h7.25l16.39,36.14H468.3l-14.21-32.57h3.06l-14.1,32.57Zm8.58-8.26v-5.68h22.36v5.68Z"/ fill="currentColor"/>
+</symbol>
+<symbol id="tf-round" viewBox="314.78 191.88 212.33 211.52">
+<path d="M365.59,374.48a8,8,0,0,0-1.94-1c-.72-.28-1.53-.54-2.21-.74-1.05-.3-1.89-.58-2.65-.86a7.23,7.23,0,0,1-1.75-.91,2.71,2.71,0,0,1-1.19-2.35,2.72,2.72,0,0,1,1.27-2.49,5.44,5.44,0,0,1,3-.8,5,5,0,0,1,3.3,1.06,4.26,4.26,0,0,1,1.34,3.39h2.09a6.63,6.63,0,0,0-1.59-4.8,6.43,6.43,0,0,0-5-1.82,7.86,7.86,0,0,0-3.64.78,5.65,5.65,0,0,0-2.29,2,5,5,0,0,0-.78,2.69,4.49,4.49,0,0,0,.67,2.5,6,6,0,0,0,1.75,1.77,10.47,10.47,0,0,0,2.3,1.13c.86.31,1.71.57,2.57.81a17.58,17.58,0,0,1,2.45.88,4.2,4.2,0,0,1,1.52,1.15,2.76,2.76,0,0,1,.54,1.78,3.48,3.48,0,0,1-.52,1.89,3.41,3.41,0,0,1-1.54,1.26,6.32,6.32,0,0,1-2.53.46,6.83,6.83,0,0,1-3-.64,5.11,5.11,0,0,1-2-1.75,5,5,0,0,1-.84-2.46h-2a3.06,3.06,0,0,0,0,1.34,7,7,0,0,0,.65,1.83,6.88,6.88,0,0,0,1.42,1.86,6.75,6.75,0,0,0,2.37,1.45,9.78,9.78,0,0,0,3.49.56,8.3,8.3,0,0,0,3.89-.8,5.25,5.25,0,0,0,2.23-2.08,5.63,5.63,0,0,0,.72-2.79,5.43,5.43,0,0,0-.56-2.59A5.16,5.16,0,0,0,365.59,374.48Z"/ fill="currentColor"/>
+<path d="M505.06,246.9a7.89,7.89,0,0,0-1.94-1.05c-.72-.27-1.53-.54-2.21-.74-1.05-.3-1.89-.58-2.64-.86a7.22,7.22,0,0,1-1.75-.9,2.85,2.85,0,0,1-.91-1,2.8,2.8,0,0,1-.29-1.3,2.74,2.74,0,0,1,1.27-2.49,5.45,5.45,0,0,1,3-.8,5,5,0,0,1,3.3,1,4.31,4.31,0,0,1,1.33,3.39h2.1a6.61,6.61,0,0,0-1.6-4.8,6.42,6.42,0,0,0-5-1.81,7.9,7.9,0,0,0-3.65.78,5.65,5.65,0,0,0-2.29,2A5,5,0,0,0,493,241a4.47,4.47,0,0,0,.67,2.5,6.27,6.27,0,0,0,1.75,1.77,10.47,10.47,0,0,0,2.3,1.13c.86.31,1.71.57,2.58.82a16.24,16.24,0,0,1,2.44.88,4.1,4.1,0,0,1,1.52,1.14,2.79,2.79,0,0,1,.54,1.79,3.34,3.34,0,0,1-.52,1.88,3.5,3.5,0,0,1-1.54,1.27,6.26,6.26,0,0,1-2.53.45,6.7,6.7,0,0,1-3-.64,5,5,0,0,1-2-1.75,4.82,4.82,0,0,1-.83-2.45h-2a3.4,3.4,0,0,0,0,1.34A7,7,0,0,0,493,253a7.15,7.15,0,0,0,1.41,1.86,7.27,7.27,0,0,0,2.37,1.45,9.8,9.8,0,0,0,3.49.55,8.37,8.37,0,0,0,3.9-.79,5.24,5.24,0,0,0,2.22-2.09,5.62,5.62,0,0,0,.72-2.78,5.35,5.35,0,0,0-.56-2.6A5.12,5.12,0,0,0,505.06,246.9Z"/ fill="currentColor"/>
+<polygon points="340.39 329.68 334.73 341.48 329.02 329.68 326.8 329.68 333.64 343.43 333.64 350.36 335.7 350.36 335.7 343.43 342.53 329.68 340.39 329.68"/ fill="currentColor"/>
+<rect x="464.49" y="204.08" width="2.57" height="20.66"/ fill="currentColor"/>
+<polygon points="512.55 288.09 527.11 288.09 527.11 284.31 507.83 284.31 507.83 304.9 512.55 304.9 512.55 296.93 525.05 296.93 525.05 293.14 512.55 293.14 512.55 288.09"/ fill="currentColor"/>
+<polygon points="335.75 284.31 314.78 284.31 314.78 288.09 322.91 288.09 322.91 304.9 327.62 304.9 327.62 288.09 335.75 288.09 335.75 284.31"/ fill="currentColor"/>
+<polygon points="452.43 385.3 452.43 382.72 435.02 382.72 435.02 385.3 442.31 385.3 442.31 403.39 445.14 403.39 445.14 385.3 452.43 385.3"/ fill="currentColor"/>
+<path d="M395.71,395.6l1.82-4.94,1.83-4.94,1.82,4.94L403,395.6h-7.29ZM398,382.71l-7.86,20.69h2.67l2-5.41h9.05l2,5.41h2.74l-7.93-20.69Z"/ fill="currentColor"/>
+<polygon points="338.13 252.92 338.13 248.52 349.89 248.52 350.17 248.52 350.17 248.24 350.17 244.73 350.17 244.44 349.89 244.44 338.13 244.44 338.13 239.99 351.8 239.99 352.08 239.99 352.08 239.71 352.08 236.16 352.08 235.88 351.8 235.88 334.15 235.88 333.87 235.88 333.87 236.16 333.87 256.75 333.87 257.03 334.15 257.03 351.83 257.03 352.11 257.03 352.11 256.75 352.11 253.21 352.11 252.92 351.83 252.92 338.13 252.92"/ fill="currentColor"/>
+<polygon points="383.85 203.82 383.56 203.82 383.56 204.1 383.56 219.74 371.24 203.93 371.15 203.82 371.01 203.82 368.18 203.82 367.89 203.82 367.89 204.1 367.89 224.77 367.89 225.06 368.18 225.06 371.01 225.06 371.3 225.06 371.3 224.77 371.3 209.19 383.63 224.95 383.71 225.06 383.85 225.06 386.67 225.06 386.95 225.06 386.95 224.77 386.95 204.1 386.95 203.82 386.67 203.82 383.85 203.82"/ fill="currentColor"/>
+<polygon points="490.23 362.89 489.95 362.89 489.95 363.17 489.95 378.58 476.86 362.99 476.77 362.89 476.64 362.89 473.52 362.89 473.24 362.89 473.24 363.17 473.24 383.83 473.24 384.11 473.52 384.11 476.64 384.11 476.92 384.11 476.92 383.83 476.92 368.51 490.01 384.01 490.1 384.11 490.23 384.11 493.32 384.11 493.6 384.11 493.6 383.83 493.6 363.17 493.6 362.89 493.32 362.89 490.23 362.89"/ fill="currentColor"/>
+<path d="M520.3,347.83l-9.36-20.62-.07-.17h-4.51l-.07.17-9.23,20.62-.18.4h4.76l.08-.17,2-4.54h9.95l2,4.54.08.17h4.79ZM512,339.71h-6.63l3.3-7.62Z"/ fill="currentColor"/>
+<polygon points="427.85 208.62 415.12 191.88 412.58 191.88 412.58 212.56 415.12 212.56 415.12 195.85 427.85 212.56 430.4 212.56 430.4 191.88 427.85 191.88 427.85 208.62"/ fill="currentColor"/>
+</symbol>
+</svg>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="테니스판타지 홈">
+      <svg class="logo" fill="currentColor" viewBox="0 0 435.6 37.51" role="img" aria-label="TENNIS FANTASY"><use href="#tf-wordmark"/></svg>
+      <span class="brand__kr">테니스판타지</span>
+    </a>
+    <nav class="nav" aria-label="주요 메뉴">
+      <a href="#facility">시설</a>
+      <a href="#program">레슨·수강료</a>
+      <a href="#roadmap">성장 로드맵</a>
+      <a href="#event">이벤트</a>
+      <a href="#visit">오시는 길</a>
+    </nav>
+    <a class="header-cta" href="https://pf.kakao.com/_xhumzs" target="_blank" rel="noopener">카카오톡 상담</a>
+    <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="hero__cover">
+      <div class="field" aria-hidden="true"></div>
+      <div class="wrap hero__cover-inner">
+        <div class="cover-row">
+          <span>Pleasure &amp; Potential</span>
+          <span>Est. 2021 · Seoul</span>
+        </div>
+        <svg class="hero__wordmark" fill="currentColor" viewBox="0 0 435.6 37.51" role="img" aria-label="TENNIS FANTASY"><use href="#tf-wordmark"/></svg>
+        <div class="cover-row">
+          <span>Indoor Tennis Club</span>
+          <span>Banpo · Bangbae · Samseong · Dongjak</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__body">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <span class="eyebrow">Indoor Tennis · Since 2021</span>
+          <h1>처음 잡은 라켓도<br /><em>판타지</em>가 됩니다</h1>
+          <p class="hero__lead">
+            보라색 코트, 카페 같은 라운지, 볼머신 연습까지.
+            <span class="nowrap">반포·방배·삼성·동작</span> 네 곳에서, 레슨의 1시간이 온전히 나를 위한 시간이 되도록 준비했습니다.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#visit">지점 선택하기 <span class="btn__arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn--line" href="https://pf.kakao.com/_xhumzs" target="_blank" rel="noopener">체험·상담 카카오톡</a>
+          </div>
+          <ul class="hero__facts">
+            <li><b>4곳</b><span>반포 · 방배 · 삼성 · 동작</span></li>
+            <li><b>2021.05</b><span>반포점에서 시작</span></li>
+            <li><b>06:00–22:00</b><span>실내 지점 이용 시간</span></li>
+            <li><b>Racket</b><span>라켓 대여 가능</span></li>
+          </ul>
+        </div>
+        <figure class="hero__shot">
+          <img src="images/hero.jpg" alt="테니스판타지 보라색 실내 코트에서 스윙하는 모습" fetchpriority="high" />
+          <figcaption>반포점 · Pleasure Purple Court</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="branches" aria-label="지점 바로가기">
+    <ul>
+      <li><a href="#banpo"><span class="num">01</span><b>반포점</b><span class="desc">실내 2면 · 라운지 · 볼머신</span><span class="en">Seocho</span></a></li>
+      <li><a href="#bangbae"><span class="num">02</span><b>방배점</b><span class="desc">실내 · 워밍업존 · 2층 편집숍</span><span class="en">Bangbae</span></a></li>
+      <li><a href="#samseong"><span class="num">03</span><b>삼성점</b><span class="desc">테니스 + 피트니스 무료</span><span class="en">Samseong</span></a></li>
+      <li><a href="#dongjak"><span class="num">04</span><b>동작테니스장</b><span class="desc">야외 클레이 6면 · 클럽</span><span class="en">Dongjak</span></a></li>
+    </ul>
+  </section>
+
+  <!-- ================= 시설 ================= -->
+  <section class="section" id="facility">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Facilities</span>
+        <h2>지하지만 지하 같지 않은,<br />보라색으로 시작하는 공간</h2>
+        <p>
+          테니스판타지는 2021년 5월 반포점을 시작으로 지금의 네 곳을 운영하고 있습니다.
+          코트 색부터 라운지, 샤워실까지 ‘운동만 하는 곳’이 아닌 공간으로 만들었습니다.
+        </p>
+      </div>
+
+      <div class="facilities">
+        <!-- 반포 -->
+        <article class="facility reveal" id="banpo">
+          <div class="facility__head">
+            <span class="facility__idx">01</span>
+            <div class="facility__title">
+              <h3>반포점 <span class="tag">1호점 · 2021.5</span></h3>
+              <p class="facility__addr">서울 서초구 고무래로10길 17 동호빌딩 지하 2층 · 고속터미널역 도보 5분</p>
+            </div>
+            <a class="btn btn--line btn--sm" href="https://pf.kakao.com/_xhumzs" target="_blank" rel="noopener">반포 상담</a>
+          </div>
+
+          <div class="facility__body">
+            <div class="gallery">
+              <figure class="g-lg">
+                <img src="images/banpo-court-wide.jpg" alt="반포점 보라색 코트 전경" loading="lazy" />
+                <figcaption>보라색 하드코트 2면</figcaption>
+              </figure>
+              <figure>
+                <img src="images/banpo-court.jpg" alt="기둥 사이로 이어지는 반포점 코트" loading="lazy" />
+                <figcaption>기둥 사이로 이어지는 코트</figcaption>
+              </figure>
+              <figure>
+                <img src="images/banpo-lounge.jpg" alt="반포점 라운지 소파와 아트월" loading="lazy" />
+                <figcaption>라운지 &amp; 아트월</figcaption>
+              </figure>
+              <figure>
+                <img src="images/banpo-pt.jpg" alt="반포점 PT·휘트니스존과 유리벽 너머 코트" loading="lazy" />
+                <figcaption>PT · 휘트니스존</figcaption>
+              </figure>
+              <figure>
+                <img src="images/banpo-warmup.jpg" alt="반포점 웜업존의 스텝퍼와 매트" loading="lazy" />
+                <figcaption>웜업존</figcaption>
+              </figure>
+              <figure class="g-wide">
+                <img src="images/banpo-screen-tennis.jpg" alt="스크린 테니스 타깃 연습 공간" loading="lazy" />
+                <figcaption>스크린 테니스 타깃</figcaption>
+              </figure>
+              <figure>
+                <img src="images/banpo-shower.jpg" alt="반포점 남녀 프라이빗 샤워실" loading="lazy" />
+                <figcaption>샤워실</figcaption>
+              </figure>
+              <figure>
+                <img src="images/banpo-rackets.jpg" alt="반포점 라켓 대여 거치대" loading="lazy" />
+                <figcaption>라켓 대여</figcaption>
+              </figure>
+            </div>
+
+            <div class="facts">
+              <div class="fact">
+                <span class="fact__n">01</span>
+                <div><b>코트 &amp; 연습</b><p>실내 코트 2면, 볼머신 연습공간, 스크린 테니스 타깃, 라켓 월.</p></div>
+              </div>
+              <div class="fact">
+                <span class="fact__n">02</span>
+                <div><b>라운지 &amp; 카페테리아</b><p>커피머신으로 무료 커피, 운동 전후 쉬어가는 라운지.</p></div>
+              </div>
+              <div class="fact">
+                <span class="fact__n">03</span>
+                <div><b>샤워 · 라커</b><p>남·여 프라이빗 샤워실과 락커. 라켓 대여 월 1만원.</p></div>
+              </div>
+              <div class="fact">
+                <span class="fact__n">04</span>
+                <div><b>주차</b><p>건물 앞 주차, 만차 시 인근 공영주차장 1시간 지원.</p></div>
+              </div>
+              <div class="fact">
+                <span class="fact__n">05</span>
+                <div><b>이용 시간</b><p>매일 06:00 ~ 22:00 · 카카오톡 채팅 상담 10:00 ~ 18:00</p></div>
+              </div>
+              <div class="chips">
+                <span>단식 코트 2면</span><span>볼머신</span><span>웜업존</span><span>스트링 작업</span><span>라켓 대여</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 방배 -->
+        <article class="facility reveal" id="bangbae">
+          <div class="facility__head">
+            <span class="facility__idx">02</span>
+            <div class="facility__title">
+              <h3>방배점 <span class="tag">지하1층 ~ 지상2층</span></h3>
+              <p class="facility__addr">서울 서초구 방배로 118 · 방배역·내방역 도보 5분</p>
+            </div>
+            <a class="btn btn--line btn--sm" href="https://pf.kakao.com/_TYdxfb" target="_blank" rel="noopener">방배 상담</a>
+          </div>
+
+          <div class="facility__body">
+            <div class="panel" data-en="BANGBAE">
+              <svg class="panel__seal" fill="currentColor" viewBox="0 0 212.33 211.52" aria-hidden="true"><use href="#tf-round"/></svg>
+              <span class="panel__label">Bangbae · Indoor</span>
+              <div class="panel__stats"><span>100평 이상 실내 코트</span><span>지하1층 ~ 지상2층</span><span>2층 테니스 편집숍</span><span>웜업존</span></div>
+              <p class="panel__note">현장 사진은 준비 중입니다. 촬영본을 받으면 이 자리에 바로 넣습니다.</p>
+            </div>
+            <div class="facts">
+              <div class="fact">
+                <span class="fact__n">01</span>
+                <div><b>100평 이상의 실내 코트</b><p>천장이 높고 답답하지 않은 공간. 보라색 코트와 조명.</p></div>
+              </div>
+              <div class="fact">
+                <span class="fact__n">02</span>
+                <div><b>워밍업존 + 볼머신실</b><p>레슨 전 몸을 푸는 워밍업 공간(테라스 포함)과 볼머신 연습실.</p></div>
+              </div>
+              <div class="fact">
+                <span class="fact__n">03</span>
+                <div><b>2층 테니스 편집숍</b><p>라켓·테니스화·의류·볼까지, 운동하다 필요한 것을 바로. 라운지도 함께.</p></div>
+              </div>
+              <div class="fact">
+                <span class="fact__n">04</span>
+                <div><b>락커룸 · 샤워실</b><p>남·여 락커룸과 샤워실, 드라이기 구비.</p></div>
+              </div>
+              <div class="fact">
+                <span class="fact__n">05</span>
+                <div><b>주차</b><p>건물 내 주차 1시간 지원(초과 요금은 현장 확인).</p></div>
+              </div>
+              <div class="fact">
+                <span class="fact__n">06</span>
+                <div><b>이용 시간</b><p>매일 06:00 ~ 22:00 · 카카오톡 채팅 상담 10:00 ~ 18:00</p></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 삼성 -->
+        <article class="facility reveal" id="samseong">
+          <div class="facility__head">
+            <span class="facility__idx">03</span>
+            <div class="facility__title">
+              <h3>삼성점 <span class="tag">테니스 + 피트니스</span></h3>
+              <p class="facility__addr">서울 강남구 삼성로 512 삼성동빌딩 지하 1층 · 삼성역·선릉역 사이</p>
+            </div>
+            <a class="btn btn--line btn--sm" href="https://pf.kakao.com/_XelyG" target="_blank" rel="noopener">삼성 상담</a>
+          </div>
+
+          <div class="facility__body">
+            <div class="gallery">
+              <figure class="g-lg">
+                <img src="images/samsung-court.jpg" alt="삼성점 실내 코트와 흰 메시 벽" loading="lazy" />
+                <figcaption>보라색 실내 코트</figcaption>
+              </figure>
+              <figure>
+                <img src="images/samsung-lounge.jpg" alt="삼성점 라운지와 카페 테이블" loading="lazy" />
+                <figcaption>라운지 · 카페</figcaption>
+              </figure>
+              <figure>
+                <img src="images/samsung-rest.jpg" alt="삼성점 코트 옆 대기 공간과 벤치" loading="lazy" />
+                <figcaption>대기 공간</figcaption>
+              </figure>
+              <figure>
+                <img src="images/samsung-shower.jpg" alt="삼성점 샤워실·화장실로 이어지는 복도" loading="lazy" />
+                <figcaption>샤워실 · 탈의</figcaption>
+              </figure>
+              <figure>
+                <img src="images/samsung-reception.jpg" alt="삼성점 리셉션 데스크" loading="lazy" />
+                <figcaption>리셉션</figcaption>
+              </figure>
+            </div>
+            <div class="facts">
+              <div class="fact">
+                <span class="fact__n">01</span>
+                <div><b>레슨 = 피트니스 무료</b><p>레슨 멤버십이면 버핏그라운드 피트니스를 횟수 제한 없이 이용. 샤워장·락커·수건 구비.</p></div>
+              </div>
+              <div class="fact">
+                <span class="fact__n">02</span>
+                <div><b>한 건물에서 운동 전부</b><p>테니스 · 필라테스 · 패시브 스트레칭 · 팀버핏 · 피트니스가 한 공간에.</p></div>
+              </div>
+              <div class="fact">
+                <span class="fact__n">03</span>
+                <div><b>체험 수업</b><p>레슨 20분 + 볼머신. 변경·취소는 24시간 전까지.</p></div>
+              </div>
+              <div class="fact">
+                <span class="fact__n">04</span>
+                <div><b>주차</b><p>건물 내 주차 2시간 무료, 초과 10분당 1,000원. 데스크 앞 태블릿에 차량 등록.</p></div>
+              </div>
+              <div class="fact">
+                <span class="fact__n">05</span>
+                <div><b>준비물</b><p>밑창 깨끗한 실내운동화 지참(도착 후 갈아신기). 운동복은 대여 가능.</p></div>
+              </div>
+              <div class="fact">
+                <span class="fact__n">06</span>
+                <div><b>이용 시간</b><p>카카오톡 채팅 상담 월~금 10:00 ~ 18:00 (주말 미운영)</p></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 동작 -->
+        <article class="facility reveal" id="dongjak">
+          <div class="facility__head">
+            <span class="facility__idx">04</span>
+            <div class="facility__title">
+              <h3>동작테니스장 <span class="tag">야외 클레이 6면</span></h3>
+              <p class="facility__addr">서울 동작구 현충로 220 동작주차공원 내 · 4·9호선 동작역 도보 3분</p>
+            </div>
+            <a class="btn btn--line btn--sm" href="https://pf.kakao.com/_jxkxaxhn" target="_blank" rel="noopener">동작 상담</a>
+          </div>
+
+          <div class="facility__body">
+            <div class="panel" data-en="DONGJAK">
+              <svg class="panel__seal" fill="currentColor" viewBox="0 0 212.33 211.52" aria-hidden="true"><use href="#tf-round"/></svg>
+              <span class="panel__label">Dongjak · Outdoor</span>
+              <div class="panel__stats"><span>야외 클레이 6면</span><span>야간 조명 3면</span><span>주차 147면</span><span>4·9호선 동작역 3분</span></div>
+              <p class="panel__note">현장 사진은 준비 중입니다. 동작주차공원 내 코트 촬영본을 받으면 넣습니다.</p>
+            </div>
+            <div class="facts">
+              <div class="fact">
+                <span class="fact__n">01</span>
+                <div><b>클레이 코트 6면</b><p>국립현충원을 마주한 동작주차공원 안. 야간 조명 3면.</p></div>
+              </div>
+              <div class="fact">
+                <span class="fact__n">02</span>
+                <div><b>탈의실 · 샤워실</b><p>남·여 탈의실과 샤워실을 갖춘 공공 체육시설.</p></div>
+              </div>
+              <div class="fact">
+                <span class="fact__n">03</span>
+                <div><b>주차</b><p>동작주차공원 주차장 147면 · 5분당 100원(유료).</p></div>
+              </div>
+              <div class="fact">
+                <span class="fact__n">04</span>
+                <div><b>코트 대관</b><p>공공 코트 예약은 서울특별시 공공서비스 예약(yeyak.seoul.go.kr)에서만. 전화·카카오톡 예약 불가.</p></div>
+              </div>
+              <div class="fact">
+                <span class="fact__n">05</span>
+                <div><b>이용 시간</b><p>매일 06:00 ~ 20:00 · 채팅 상담 09:00 ~ 18:00</p></div>
+              </div>
+              <div class="note">
+                <b>확인 필요</b> — 동작 레슨 문의 번호가 안내처마다 달라, 레슨 010-8773-9172 / 시설·코트 010-2474-2461로 나눠 표기했습니다.
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 브랜드 스토리 -->
+      <div class="story reveal">
+        <figure>
+          <img src="images/banpo-founders.jpg" alt="테니스판타지 반포점 코트에서 촬영한 대표 두 사람" loading="lazy" />
+        </figure>
+        <figure>
+          <img src="images/banpo-court-floor.jpg" alt="TENNIS FANTASY 레터링이 들어간 보라색 코트 바닥" loading="lazy" />
+        </figure>
+        <div class="story__text">
+          <span class="tag">Brand Story</span>
+          <h3>2021년 5월, 보라색 코트 하나에서 시작했습니다</h3>
+          <p>
+            그때만 해도 보라색 테니스 코트는 어디에도 없었습니다. 지하지만 지하 같지 않고, 실내지만 실내 같지 않은 공간을 만들고 싶었습니다.
+            지금은 반포·방배·삼성·동작 네 곳에서 같은 색의 코트를 만나볼 수 있습니다.
+          </p>
+          <blockquote>“potential start anything here” — 무엇이든 시작할 수 있는 곳</blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 프로그램·수강료 ================= -->
+  <section class="section section--tint" id="program">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Lesson &amp; Price</span>
+        <h2>정규레슨과 쿠폰레슨,<br />내 일정에 맞는 쪽으로</h2>
+        <p>두 방식의 차이는 ‘시간을 고정하느냐’입니다. 1시간 수업은 웜업 · 레슨 · 볼머신으로 구성됩니다.</p>
+      </div>
+
+      <div class="prog-grid">
+        <div class="prog reveal">
+          <div class="prog__name">정규레슨 <span class="prog__badge">요일·시간 고정</span></div>
+          <p>매주 같은 요일·시간에 등록하는 방식. 한 달 단위로 등록하고, 악천후·공휴일 수업은 지점 규정에 따라 보강합니다.</p>
+          <ul>
+            <li>1:1 / 1:2 · 주 1·2·3회</li>
+            <li>20분 또는 30분 수업</li>
+            <li>2개월·3개월 등록 시 할인(지점별)</li>
+          </ul>
+        </div>
+        <div class="prog reveal">
+          <div class="prog__name">쿠폰레슨 <span class="prog__badge">수시 예약</span></div>
+          <p>원하는 날 원하는 시간에 카카오톡으로 예약하는 방식. 횟수권으로 구매하고, 악천후·공휴일에는 횟수가 차감되지 않습니다.</p>
+          <ul>
+            <li>1회 · 5회 · 10회권</li>
+            <li>유효기간 5회 2개월 · 10회 3개월 (지점별 상이)</li>
+            <li>당일 예약 가능 · 당일 취소·변경은 차감</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="subhead">1시간은 이렇게 쓰입니다</h3>
+      <div class="routine reveal">
+        <div><b>15 + 30 + 15</b><span>반포점 · 웜업 15분 + 레슨 30분 + 볼머신 15분</span></div>
+        <div><b>20 + 20 + 20</b><span>방배점 · 웜업 20분 + 레슨 20분 + 볼머신 20분</span></div>
+        <div><b>20 + 볼머신</b><span>삼성점 · 레슨 20분 + 볼머신 (체험 수업 기준)</span></div>
+      </div>
+      <p class="routine-note">웜업과 볼머신은 셀프로 진행하며 의무는 아닙니다. 동작테니스장은 20분·30분 단위 정기/쿠폰 수업으로 운영합니다.</p>
+
+      <!-- 가격표 -->
+      <div class="price-card reveal">
+        <div class="price-card__head">
+          <div>
+            <strong>수강료 안내</strong>
+            <p>VAT 포함 · 1:2는 1인 기준 · 2026년 확인된 가격표 기준</p>
+          </div>
+          <div class="tabs" role="tablist" aria-label="지점별 수강료">
+            <button role="tab" id="tab-banpo" aria-controls="panel-banpo" aria-selected="true">반포점</button>
+            <button role="tab" id="tab-bangbae" aria-controls="panel-bangbae" aria-selected="false">방배점</button>
+          </div>
+        </div>
+        <p class="price-hint">표는 좌우로 넘겨서 볼 수 있습니다.</p>
+
+        <div class="price-body" id="panel-banpo" role="tabpanel" aria-labelledby="tab-banpo">
+          <div class="table-scroll">
+            <table class="prices">
+              <caption>20분 레슨 · 평일 오전 ~ 14시</caption>
+              <thead><tr><th scope="col">구분</th><th scope="col">주 1회</th><th scope="col">주 2회</th><th scope="col">주 3회</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">1:1</th><td class="won">160,000원</td><td class="won">300,000원</td><td class="won">420,000원</td></tr>
+                <tr><th scope="row">1:2 (1인)</th><td class="won">120,000원</td><td class="won">220,000원</td><td class="won">318,000원</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-scroll">
+            <table class="prices">
+              <caption>30분 레슨 · 정규 (평일 / 주말)</caption>
+              <thead><tr><th scope="col">구분</th><th scope="col">주 1회</th><th scope="col">주 2회</th><th scope="col">주 3회</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">1:1 평일</th><td class="won">240,000원</td><td class="won">440,000원</td><td class="won">600,000원</td></tr>
+                <tr><th scope="row">1:2 평일 (1인)</th><td class="won">180,000원</td><td class="won">300,000원</td><td class="won">380,000원</td></tr>
+                <tr><th scope="row">1:1 주말</th><td class="won">260,000원</td><td class="won">480,000원</td><td>—</td></tr>
+                <tr><th scope="row">1:2 주말 (1인)</th><td class="won">200,000원</td><td class="won">320,000원</td><td>—</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-scroll">
+            <table class="prices">
+              <caption>30분 레슨 · 평일 + 주말 혼합</caption>
+              <thead><tr><th scope="col">구성</th><th scope="col">1:1</th><th scope="col">1:2 (1인)</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">평일 1회 + 주말 1회 (주 2회)</th><td class="won">460,000원</td><td class="won">320,000원</td></tr>
+                <tr><th scope="row">평일 2회 + 주말 1회 (주 3회)</th><td class="won">660,000원</td><td class="won">460,000원</td></tr>
+                <tr><th scope="row">평일 1회 + 주말 2회 (주 3회)</th><td class="won">700,000원</td><td class="won">480,000원</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-scroll">
+            <table class="prices">
+              <caption>쿠폰레슨 · 사용기간 3개월</caption>
+              <thead><tr><th scope="col">구분</th><th scope="col">1회</th><th scope="col">5회</th><th scope="col">10회</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">20분 1:1</th><td class="won">45,000원</td><td class="won">220,000원</td><td class="won">400,000원</td></tr>
+                <tr><th scope="row">20분 1:2 (1인)</th><td class="won">35,000원</td><td class="won">170,000원</td><td class="won">300,000원</td></tr>
+                <tr><th scope="row">30분 1:1</th><td class="won">65,000원</td><td class="won">320,000원</td><td class="won">600,000원</td></tr>
+                <tr><th scope="row">30분 1:2 (1인)</th><td class="won">50,000원</td><td class="won">250,000원</td><td class="won">450,000원</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-scroll">
+            <table class="prices">
+              <caption>코트 · 볼머신 · 대여</caption>
+              <thead><tr><th scope="col">항목</th><th scope="col">요금</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">코트 대여 (1코트 · 1시간)</th><td class="won">30,000원</td></tr>
+                <tr><th scope="row">볼머신 20분 이내</th><td class="won">20,000원</td></tr>
+                <tr><th scope="row">볼머신 30분 이내</th><td class="won">30,000원</td></tr>
+                <tr><th scope="row">라커 대여 · 라켓 대여</th><td class="won">각 월 10,000원</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="price-body" id="panel-bangbae" role="tabpanel" aria-labelledby="tab-bangbae" hidden>
+          <div class="table-scroll">
+            <table class="prices">
+              <caption>정규레슨 · 평일 &amp; 주말 통합 요금 (1개월 등록 기준)</caption>
+              <thead><tr><th scope="col">구분</th><th scope="col">주 1회</th><th scope="col">주 2회</th><th scope="col">주 3회</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">1:1</th><td class="won">180,000원</td><td class="won">320,000원</td><td class="won">450,000원</td></tr>
+                <tr><th scope="row">2:1 (1인)</th><td class="won">140,000원</td><td class="won">240,000원</td><td class="won">330,000원</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-scroll">
+            <table class="prices">
+              <caption>등록 기간 할인 · 정규레슨</caption>
+              <thead><tr><th scope="col">등록 기간</th><th scope="col">할인</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">2개월</th><td class="won">5%</td></tr>
+                <tr><th scope="row">3개월</th><td class="won">10%</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="routine-note">
+            방배점은 평일·주말 구분 없이 요일과 시간을 고정해 등록합니다. 1시간은 웜업 20분 + 레슨 20분 + 볼머신 20분으로 진행됩니다.
+          </p>
+        </div>
+
+        <div class="price-foot">
+          <span>동작테니스장·삼성점은 프로그램과 가격이 달라 카카오톡으로 안내드립니다. 라켓·라커 대여 등 부가 항목은 지점별로 확인해 주세요.</span>
+          <a class="btn btn--dark btn--sm" href="https://ouy2006.github.io/tf-calc/" target="_blank" rel="noopener">수강료 계산기로 내 금액 계산하기 <span class="btn__arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 성장 로드맵 ================= -->
+  <section class="section roadmap-sec" id="roadmap">
+    <div class="field" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Growth Road Map</span>
+        <h2>라켓을 잡은 날부터,<br />중급 게임까지 이어집니다</h2>
+        <p>
+          레슨만 받다가 끝나지 않도록, 게임 룰과 매너를 배우는 ‘테생이’를 거쳐
+          같은 레벨의 클럽에서 계속 칩니다. 회원 레벨(D~V)은 담당 코치가 부여하고, 다음 단계는 그 레벨이 정합니다.
+        </p>
+        <div class="roadmap-path" aria-hidden="true">
+          <span>입문 레슨</span><i>→</i><span>테생이</span><i>→</i><span>수준별 클럽 · 중급</span>
+        </div>
+      </div>
+
+      <ol class="roadmap">
+        <li class="roadmap__step reveal">
+          <div class="roadmap__head"><span class="roadmap__num">STEP 01</span><span class="roadmap__level">레벨 D · C</span></div>
+          <figure class="roadmap__photo">
+            <img src="images/member-lesson.jpg" alt="실내 코트에서 코치와 함께 레슨을 받는 테니스판타지 회원" loading="lazy" />
+            <figcaption>실내 레슨 현장</figcaption>
+          </figure>
+          <h3>레슨 — 기본기 다지기</h3>
+          <span class="roadmap__sub">레슨 1~6개월차</span>
+          <p>1시간은 웜업 · 레슨 · 셀프 볼머신으로 구성됩니다. 라켓은 대여하니 실내운동화만 챙기면 됩니다.</p>
+          <ul class="roadmap__list">
+            <li>정규레슨 · 쿠폰레슨 중 내 일정에 맞춰</li>
+            <li>레벨 D ‘기본기를 다지자’ → C ‘게임을 배워보자’</li>
+            <li>코치와 랠리가 되는 순간이 다음 단계의 신호</li>
+          </ul>
+          <div class="roadmap__foot">다음 단계 · 테생이 머리올려</div>
+        </li>
+
+        <li class="roadmap__step roadmap__step--key reveal">
+          <div class="roadmap__head"><span class="roadmap__num">STEP 02</span><span class="roadmap__level">레벨 B2 이하</span></div>
+          <figure class="roadmap__photo">
+            <img src="images/member-taesaengi.jpg" alt="야외 코트에서 라켓을 들고 모인 원데이 클래스 참가자들" loading="lazy" />
+            <figcaption>야외 원데이 클래스 단체</figcaption>
+          </figure>
+          <h3>테생이 머리올려</h3>
+          <span class="roadmap__sub">원데이 야외 클래스 · 57기까지 진행</span>
+          <p>테니스 신생아 ‘테생이’가 야외 풀코트에서 처음 게임을 해보는 3시간. 룰과 매너를 배우고 그날 바로 복식 경기를 칩니다.</p>
+          <ul class="roadmap__list">
+            <li>게임 룰 — 포인트 · 게임 · 세트 · 코트체인지 · 매치포인트</li>
+            <li>서비스 넣는 법 / 리시브 받는 법</li>
+            <li>경기 매너 · 테니스장에서의 매너</li>
+            <li>참가비 3만원 · 선착순 입금 마감</li>
+          </ul>
+          <div class="roadmap__foot">테판 성인회원(정규·쿠폰 5회 이상) · 미성년자·중상급자 제외</div>
+        </li>
+
+        <li class="roadmap__step reveal">
+          <div class="roadmap__head"><span class="roadmap__num">STEP 03</span><span class="roadmap__level">레벨 B2 이상</span></div>
+          <figure class="roadmap__photo">
+            <img src="images/member-club-night.jpg" alt="조명이 켜진 야간 야외 코트에서 진행되는 테니스판타지 클럽 경기" loading="lazy" />
+            <figcaption>야외 코트 · 야간 경기</figcaption>
+          </figure>
+          <h3>수준별 클럽</h3>
+          <span class="roadmap__sub">매주 목 · 금 · 일 야외 코트</span>
+          <p>회원 레벨에 따라 초보는 테린이끼리, 중급·상급은 같은 레벨끼리 게임을 엮습니다. 배운 것을 매주 경기로 이어가는 자리입니다.</p>
+          <ul class="roadmap__list">
+            <li>목 08~11시 반포 7·8번 · 금 19~22시 반포 5·6번</li>
+            <li>일 15~18시 동작 5·6번 · 정원 16명</li>
+            <li>신청 화요일 10시 (우선 신청 월요일 10시)</li>
+          </ul>
+          <div class="roadmap__foot">레벨 B2·B1에서 시작해 A·S·V까지 같은 클럽에서</div>
+        </li>
+      </ol>
+
+      <div class="level-ladder reveal" aria-label="회원 레벨 단계">
+        <div><b>D · C</b><span>입문 1~6개월차 · 테생이 이벤트</span></div>
+        <div class="is-now"><b>B2 · B1</b><span>클럽 참여 시작 · 6개월~2년차</span></div>
+        <div><b>A2 · A1</b><span>빡게임! · 레슨 3년차 이상</span></div>
+        <div><b>S · V</b><span>테린이대회 · 전국대회 출전</span></div>
+      </div>
+
+      <p class="roadmap-note">
+        <b>레벨은 담당 코치가 부여합니다.</b> 지금 내 레벨과 다음 테생이 기수, 클럽 빈자리는 지점 카카오톡 채널로 문의해 주세요.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= 이벤트 ================= -->
+  <section class="section" id="event">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Event &amp; Club</span>
+        <h2>코트 밖에서도 이어지는<br />테니스</h2>
+        <p>초보자를 위한 원데이 클래스, 키즈 대회, 수준별 클럽까지. 아래는 실제로 진행했던 프로그램입니다.</p>
+      </div>
+
+      <div class="events">
+        <article class="event reveal">
+          <div class="event__top"><span class="tag">정기 프로그램</span><span class="tag tag--ok">57기까지</span></div>
+          <h3>테생이 머리올려</h3>
+          <p>게임 룰과 매너를 배우고 그날 바로 야외 풀코트에서 복식 경기를 치릅니다. 레슨 1~6개월차 ‘테생이’를 위한 첫 게임 자리입니다.</p>
+          <dl>
+            <div><dt>대상</dt><dd>테판 성인회원 · 레벨 B2 이하</dd></div>
+            <div><dt>구성</dt><dd>게임 룰 · 서브/리시브 · 경기 매너 → 복식</dd></div>
+            <div><dt>진행</dt><dd>야외 3시간 · 기수별 모집</dd></div>
+            <div><dt>참가비</dt><dd>30,000원 · 선착순</dd></div>
+          </dl>
+        </article>
+
+        <article class="event reveal">
+          <div class="event__top"><span class="tag">대회</span><span class="tag tag--ok">2025년 개최</span></div>
+          <h3>제5회 테니스판타지 키즈테니스 대회</h3>
+          <p>2025년 8월, 반포점에서 열린 키즈 테니스 대회. 참가비 3만원, 모집 기간 내 환불·취소 가능.</p>
+          <dl>
+            <div><dt>장소</dt><dd>테니스판타지 반포점</dd></div>
+            <div><dt>참가비</dt><dd>30,000원</dd></div>
+          </dl>
+        </article>
+
+        <article class="event reveal">
+          <div class="event__top"><span class="tag">클럽</span><span class="tag tag--ok">레벨 B2 이상</span></div>
+          <h3>야외 클럽 (오픈채팅)</h3>
+          <p>실내에서 배운 것을 야외 코트에서 경기로. 회원 레벨에 따라 초보는 테린이끼리, 중급·상급은 동급끼리 게임을 엮습니다.</p>
+          <dl>
+            <div><dt>목</dt><dd>08~11시 · 반포 7·8번 코트</dd></div>
+            <div><dt>금</dt><dd>19~22시 · 반포 5·6번 코트</dd></div>
+            <div><dt>일</dt><dd>15~18시 · 동작 5·6번 코트</dd></div>
+            <div><dt>정원</dt><dd>16명 · 신청 화요일 10시(우선 월요일 10시)</dd></div>
+          </dl>
+        </article>
+
+        <article class="event reveal">
+          <div class="event__top"><span class="tag">이벤트</span><span class="tag tag--need">조건 확인</span></div>
+          <h3>신규 코치 레슨</h3>
+          <p>카카오채널 프로필에 안내된 신규 코치 이벤트. 진행 여부와 가능한 시간은 등록 전 채널에서 확인해 주세요.</p>
+          <dl>
+            <div><dt>구성</dt><dd>월 8회 · 1:1 20분 · 주 2회</dd></div>
+            <div><dt>금액</dt><dd>200,000원 (회당 25,000원 기준)</dd></div>
+          </dl>
+        </article>
+
+        <article class="event reveal">
+          <div class="event__top"><span class="tag">제도</span><span class="tag tag--ok">2025년 안내</span></div>
+          <h3>어르신 스포츠상품권</h3>
+          <p>65세 이상 기초연금 수급자 대상 스포츠시설 이용료 지원. 최대 15만원까지 사용할 수 있습니다.</p>
+          <dl>
+            <div><dt>확인</dt><dd>지점 카카오톡으로 문의</dd></div>
+          </dl>
+        </article>
+
+        <article class="event event--pending reveal">
+          <div class="event__top"><span class="tag">준비 중</span><span class="tag tag--need">확인 필요</span></div>
+          <h3>2026 겨울 시즌 특강</h3>
+          <p>겨울방학 집중반·연말 이벤트는 일정과 조건이 정해지면 이 자리에 게시합니다. 확정 전에는 문의로 안내드립니다.</p>
+          <dl>
+            <div><dt>상태</dt><dd>기획 중 — 사장님 확인 대기</dd></div>
+          </dl>
+        </article>
+      </div>
+
+      <div class="promo reveal">
+        <div class="promo__text">
+          <span class="tag tag--neon tag--en">OPEN EVENT</span>
+          <h3>2개월·3개월 등록 할인</h3>
+          <p>방배점 정규레슨은 2개월 등록 5%, 3개월 등록 10% 할인이 적용됩니다. 기간 연장 시 금액을 계산기로 미리 확인해 보세요.</p>
+          <div class="chips">
+            <span>2개월 5%</span><span>3개월 10%</span><span>반포·방배 정규레슨</span>
+          </div>
+        </div>
+        <img src="images/banpo-court.jpg" alt="반포점 보라색 실내 코트" loading="lazy" />
+      </div>
+
+      <div class="event-gallery__head reveal">
+        <b>지난 프로그램 현장</b>
+        <span>테니스판타지 공식 블로그(blog.naver.com/erachacha2021)에 올라온 실제 진행 사진입니다.</span>
+      </div>
+
+      <div class="gallery event-gallery">
+        <figure>
+          <img src="images/member-club-weekend.jpg" alt="야외 코트 앞에서 라켓을 들고 촬영한 주말 클럽 회원들" loading="lazy" />
+          <figcaption>주말 클럽 단체</figcaption>
+        </figure>
+        <figure>
+          <img src="images/member-tournament.jpg" alt="반포종합운동장 야외 코트에서 열린 테린이 대회 전경" loading="lazy" />
+          <figcaption>반포종합운동장 테린이대회</figcaption>
+        </figure>
+        <figure>
+          <img src="images/member-event-gathering.jpg" alt="대회 당일 천막 아래에 모인 참가자들" loading="lazy" />
+          <figcaption>대회 당일 집결·접수</figcaption>
+        </figure>
+        <figure>
+          <img src="images/member-kids-award.jpg" alt="키즈테니스대회 우수 상장과 트로피를 든 참가자" loading="lazy" />
+          <figcaption>키즈테니스대회 시상</figcaption>
+        </figure>
+        <figure class="g-low">
+          <img src="images/member-kids-festival.jpg" alt="국회동심한마당에서 진행된 키즈 테니스 체험 부스" loading="lazy" />
+          <figcaption>국회동심한마당 키즈 체험</figcaption>
+        </figure>
+        <figure>
+          <img src="images/outdoor-clay2.jpg" alt="야외 클레이 코트에서 진행된 테니스판타지 클럽·대회" loading="lazy" />
+          <figcaption>클럽·대회가 열리는 야외 클레이 코트</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 오시는 길 ================= -->
+  <section class="section section--tint" id="visit">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Visit &amp; Contact</span>
+        <h2>네 곳의 코트,<br />가까운 곳에서 시작하세요</h2>
+        <p>모든 지점 카카오톡 채널로 1:1 상담이 가능합니다. 체험 수업과 빈 시간은 채널로 문의해 주세요.</p>
+      </div>
+
+      <div class="visit-grid">
+        <article class="visit reveal">
+          <div class="visit__top">
+            <div><h3>반포점</h3><p class="visit__type">실내 · 1호점</p></div>
+            <span class="tag">고속터미널역 5분</span>
+          </div>
+          <dl>
+            <div><dt>주소</dt><dd>서울 서초구 고무래로10길 17 동호빌딩 지하 2층</dd></div>
+            <div><dt>전화</dt><dd>0507-1377-1821</dd></div>
+            <div><dt>이용</dt><dd>매일 06:00 ~ 22:00</dd></div>
+            <div><dt>상담</dt><dd>카카오톡 10:00 ~ 18:00</dd></div>
+            <div><dt>주차</dt><dd>건물 앞 주차 · 만차 시 공영주차장 1시간 지원</dd></div>
+            <div><dt>오는 길</dt><dd>3·7·9호선 고속터미널역 도보 5분 / 9호선 반포역</dd></div>
+          </dl>
+          <div class="visit__links">
+            <a class="solid" href="https://pf.kakao.com/_xhumzs" target="_blank" rel="noopener">카카오톡 상담</a>
+            <a href="https://map.naver.com/p/search/%ED%85%8C%EB%8B%88%EC%8A%A4%ED%8C%90%ED%83%80%EC%A7%80%20%EB%B0%98%ED%8F%AC%EC%A0%90" target="_blank" rel="noopener">네이버지도</a>
+          </div>
+        </article>
+
+        <article class="visit reveal">
+          <div class="visit__top">
+            <div><h3>방배점</h3><p class="visit__type">실내 · 지하1층~지상2층</p></div>
+            <span class="tag">방배역·내방역 5분</span>
+          </div>
+          <dl>
+            <div><dt>주소</dt><dd>서울 서초구 방배로 118</dd></div>
+            <div><dt>전화</dt><dd>0507-1327-1821</dd></div>
+            <div><dt>이용</dt><dd>매일 06:00 ~ 22:00</dd></div>
+            <div><dt>상담</dt><dd>카카오톡 10:00 ~ 18:00</dd></div>
+            <div><dt>주차</dt><dd>건물 내 1시간 지원</dd></div>
+            <div><dt>오는 길</dt><dd>2호선 방배역 / 7호선 내방역 도보 5분</dd></div>
+          </dl>
+          <div class="visit__links">
+            <a class="solid" href="https://pf.kakao.com/_TYdxfb" target="_blank" rel="noopener">카카오톡 상담</a>
+            <a href="https://map.naver.com/p/search/%ED%85%8C%EB%8B%88%EC%8A%A4%ED%8C%90%ED%83%80%EC%A7%80%20%EB%B0%A9%EB%B0%B0%EC%A0%90" target="_blank" rel="noopener">네이버지도</a>
+          </div>
+        </article>
+
+        <article class="visit reveal">
+          <div class="visit__top">
+            <div><h3>삼성점</h3><p class="visit__type">실내 · 버핏그라운드 삼성 B1</p></div>
+            <span class="tag">삼성역 인근</span>
+          </div>
+          <dl>
+            <div><dt>주소</dt><dd>서울 강남구 삼성로 512 삼성동빌딩 지하 1층</dd></div>
+            <div><dt>전화</dt><dd>0507-1419-5420</dd></div>
+            <div><dt>이용</dt><dd>레슨 멤버십 이용 시 피트니스 무료</dd></div>
+            <div><dt>상담</dt><dd>카카오톡 월~금 10:00 ~ 18:00</dd></div>
+            <div><dt>주차</dt><dd>2시간 무료 · 초과 10분당 1,000원</dd></div>
+            <div><dt>오는 길</dt><dd>삼성역·선릉역·삼성중앙역 사이, 코엑스 인근</dd></div>
+          </dl>
+          <div class="visit__links">
+            <a class="solid" href="https://pf.kakao.com/_XelyG" target="_blank" rel="noopener">카카오톡 상담</a>
+            <a href="https://map.naver.com/p/search/%ED%85%8C%EB%8B%88%EC%8A%A4%ED%8C%90%ED%83%80%EC%A7%80%20%EC%82%BC%EC%84%B1%EC%A0%90" target="_blank" rel="noopener">네이버지도</a>
+          </div>
+        </article>
+
+        <article class="visit reveal">
+          <div class="visit__top">
+            <div><h3>동작테니스장</h3><p class="visit__type">야외 클레이 6면 · 공공시설</p></div>
+            <span class="tag">동작역 3분</span>
+          </div>
+          <dl>
+            <div><dt>주소</dt><dd>서울 동작구 현충로 220 (동작주차공원 내)</dd></div>
+            <div><dt>전화</dt><dd>레슨 010-8773-9172 / 코트 010-2474-2461</dd></div>
+            <div><dt>이용</dt><dd>매일 06:00 ~ 20:00</dd></div>
+            <div><dt>상담</dt><dd>카카오톡 09:00 ~ 18:00</dd></div>
+            <div><dt>주차</dt><dd>동작주차공원 147면 · 5분당 100원</dd></div>
+            <div><dt>오는 길</dt><dd>4·9호선 동작역 도보 3분</dd></div>
+          </dl>
+          <div class="visit__links">
+            <a class="solid" href="https://pf.kakao.com/_jxkxaxhn" target="_blank" rel="noopener">카카오톡 상담</a>
+            <a href="https://yeyak.seoul.go.kr" target="_blank" rel="noopener">코트 예약(서울시)</a>
+            <a href="https://map.naver.com/p/search/%EB%8F%99%EC%9E%91%ED%85%8C%EB%8B%88%EC%8A%A4%EC%9E%A5" target="_blank" rel="noopener">네이버지도</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="cta">
+    <div class="field" aria-hidden="true"></div>
+    <svg class="cta__mark" fill="currentColor" viewBox="0 0 435.6 37.51" aria-hidden="true"><use href="#tf-wordmark"/></svg>
+    <div class="wrap cta__inner">
+      <div>
+        <span class="cta__tag">Pleasure &amp; Potential</span>
+        <h2>라켓은 대여해 드립니다.<br />실내운동화만 챙겨 오세요.</h2>
+        <p>원하는 요일과 시간대 2~3개를 알려주시면 빈 시간을 확인해 체험 수업과 등록을 함께 안내드립니다.</p>
+      </div>
+      <div class="cta__actions">
+        <a class="btn btn--neon" href="https://pf.kakao.com/_xhumzs" target="_blank" rel="noopener">카카오톡으로 상담하기</a>
+        <a class="btn btn--ghost" href="#program">수강료 보기</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="rules" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <svg class="logo" fill="currentColor" viewBox="0 0 435.6 37.51" role="img" aria-label="TENNIS FANTASY"><use href="#tf-wordmark"/></svg>
+        <span class="brand__kr">테니스판타지 · PLEASURE &amp; POTENTIAL</span>
+        <p>보라색 코트의 실내 테니스 레슨. 반포 · 방배 · 삼성 · 동작.</p>
+      </div>
+      <nav class="footer-links" aria-label="채널">
+        <a href="https://pf.kakao.com/_xhumzs" target="_blank" rel="noopener">반포 카카오채널</a>
+        <a href="https://pf.kakao.com/_TYdxfb" target="_blank" rel="noopener">방배 카카오채널</a>
+        <a href="https://pf.kakao.com/_XelyG" target="_blank" rel="noopener">삼성 카카오채널</a>
+        <a href="https://pf.kakao.com/_jxkxaxhn" target="_blank" rel="noopener">동작 카카오채널</a>
+        <a href="https://www.instagram.com/tennis_fantasy/" target="_blank" rel="noopener">인스타그램</a>
+        <a href="https://blog.naver.com/erachacha2021" target="_blank" rel="noopener">블로그</a>
+      </nav>
+    </div>
+    <div class="footer-note">
+      <span>© 2026 TENNIS FANTASY. All rights reserved.</span>
+      <span>가격·시설 정보는 2026년 11월 기준 확인된 자료로 작성했습니다. 실제 운영 기준과 다를 수 있어 방문 전 카카오톡 채널 확인을 권장합니다.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="float-cta" href="https://pf.kakao.com/_xhumzs" target="_blank" rel="noopener" aria-label="카카오톡으로 상담하기">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.9 3 3 6.2 3 10.1c0 2.5 1.5 4.7 3.9 6.1l-.9 3.2c-.1.4.3.7.6.5l3.8-2.3c.5.1 1 .1 1.6.1 5.1 0 9-3.2 9-7.1S17.1 3 12 3z"/></svg>
+  <span class="float-cta__label">카카오톡 상담</span>
+</a>
+
+<script>
+(function () {
+  var header = document.querySelector('.site-header');
+  var toggle = document.getElementById('navToggle');
+  var nav = document.querySelector('.nav');
+
+  function onScroll() {
+    if (window.scrollY > 40) header.classList.add('is-stuck');
+    else header.classList.remove('is-stuck');
+  }
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  toggle.addEventListener('click', function () {
+    var open = header.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기');
+  });
+  nav.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A' && header.classList.contains('is-open')) {
+      header.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // price tabs
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      tabs.forEach(function (t) {
+        var selected = t === tab;
+        t.setAttribute('aria-selected', selected ? 'true' : 'false');
+        document.getElementById(t.getAttribute('aria-controls')).hidden = !selected;
+      });
+    });
+    tab.addEventListener('keydown', function (e) {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      var i = tabs.indexOf(tab);
+      var next = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+      next.focus();
+      next.click();
+    });
+  });
+
+  // reveal on scroll
+  var items = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    items.forEach(function (el) { el.classList.add('is-in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+  items.forEach(function (el) { io.observe(el); });
+})();
+</script>
+</body>
+</html>
